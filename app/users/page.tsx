@@ -1,8 +1,16 @@
 import React from 'react'
+import UserTable from './UserTable'
 
-const page = () => {
+
+const page =() => {
+ 
   return (
-    <div>Users Page</div>
+
+    <div>
+      <h1>Users Page</h1>
+      
+      <UserTable />
+    </div>
   )
 }
 

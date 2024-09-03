@@ -3,6 +3,6 @@ import React from 'react'
 
 export const AddToCart = () => {
   return (
-   <button onClick={()=> console.log("click")}>AddToCart</button>
+   <button className='btn btn-primary' onClick={()=> console.log("click")}>AddToCart</button>
   )
 }
