@@ -1,18 +1,17 @@
-import React from 'react';
-import UserTable from './UserTable';
+import React from 'react'
+import UserTable from './UserTable'
 
-interface Props {
-  searchParams: { sort?: string };
-}
 
-const Page = ({ searchParams }: Props) => {
+const page =() => {
+ 
   return (
+
     <div>
       <h1>Users Page</h1>
-      {/* Pass the searchParams to UserTable */}
-      <UserTable searchParams={searchParams} />
+      
+      <UserTable />
     </div>
-  );
-};
+  )
+}
 
-export default Page;
+export default page
