@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 interface Props {
     params:{slug:String[]}
 }
