@@ -2,7 +2,7 @@ import React from 'react'
 import UserTable from './UserTable'
 
 interface Props{
-  searchParams : {sortOrder:String}
+  searchParams : {sortOrder:string}
 }
 
 
