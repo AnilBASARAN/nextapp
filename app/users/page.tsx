@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import UserTable from './UserTable';
 
 interface Props {
@@ -10,7 +10,9 @@ const Page = ({ searchParams }: Props) => {
     <div>
       <h1>Users Page</h1>
       {/* Pass the searchParams to UserTable */}
+     
       <UserTable searchParams={searchParams} />
+      
     </div>
   );
 };

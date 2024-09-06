@@ -7,15 +7,29 @@ interface User {
   email: string;
 }
 
-// Fetching users from the API
+/* // Fetching users from the API
 const fetchUsers = async () => {
   const response = await fetch("https://jsonplaceholder.typicode.com/users");
   return await response.json();
-};
+}; */
+
+
 
 // UserTable component with server-side sorting logic
 const UserTable = async ({ searchParams }: { searchParams?: { sort?: string } }) => {
+  
+  const fetchUsers = async (): Promise<User[]> => {
+    return new Promise((resolve) => {
+      setTimeout(async () => {
+        const response = await fetch("https://jsonplaceholder.typicode.com/users");
+        const users = await response.json();
+        resolve(users);
+      }, 3000); // 3 seconds delay
+    });
+  };
+
   let users: User[] = await fetchUsers();
+
 
   // Apply sorting based on the query parameter
   if (searchParams?.sort === 'name') {
