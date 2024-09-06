@@ -5,6 +5,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import ProductCard from './component/ProductCard'
 import NavigationBar from './component/navigation/page'
+import { Suspense } from 'react'
+import Loading from './loading'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -27,7 +29,10 @@ export default function RootLayout({
       <body className={inter.className}>
       <NavigationBar />
         <main>
-        {children}
+         
+          {children}
+         
+        
         </main>
       
         
