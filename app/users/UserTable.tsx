@@ -21,7 +21,7 @@ const UserTable = async ({ searchParams }: { searchParams?: { sort?: string } })
   const fetchUsers = async (): Promise<User[]> => {
     return new Promise((resolve) => {
       setTimeout(async () => {
-        const response = await fetch("https://jsonplaceholder.typicode.com/users");
+        const response = await fetch("https://jsonplaceholder.typicode.com/xusers");
         const users = await response.json();
         resolve(users);
       }, 3000); // 3 seconds delay
